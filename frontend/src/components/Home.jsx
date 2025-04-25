@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 import { 
   TreePine, 
   Calendar, 
@@ -41,12 +42,12 @@ export default function Home() {
             
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
-              <a href="#accueil" className="text-white bg-blue-600 px-5 py-2.5 rounded-lg hover:bg-blue-700 transition transform hover:scale-105 font-medium">Accueil</a>
-              <a href="#genealogie" className="text-gray-700 hover:text-blue-600 transition hover:scale-105 font-medium">Généalogie</a>
-              <a href="#biographie" className="text-gray-700 hover:text-blue-600 transition hover:scale-105 font-medium">Biographie</a>
-              <a href="#oeuvres" className="text-gray-700 hover:text-blue-600 transition hover:scale-105 font-medium">Oeuvres</a>
-              <a href="#loisirs" className="text-gray-700 hover:text-blue-600 transition hover:scale-105 font-medium">Loisirs</a>
-            </div>
+  <Link to="/accueil" className="text-white bg-blue-600 px-5 py-2.5 rounded-lg hover:bg-blue-700 transition transform hover:scale-105 font-medium">Accueil</Link>
+  <Link to="/genealogie" className="text-gray-700 hover:text-blue-600 transition hover:scale-105 font-medium">Généalogie</Link>
+  <Link to="/biography" className="text-gray-700 hover:text-blue-600 transition hover:scale-105 font-medium">Biographie</Link>
+  <Link to="/oeuvre" className="text-gray-700 hover:text-blue-600 transition hover:scale-105 font-medium">Oeuvres</Link>
+  <Link to="/loisirs" className="text-gray-700 hover:text-blue-600 transition hover:scale-105 font-medium">Loisirs</Link>
+</div>
             
             <div className="flex items-center space-x-4">
               <div className="hidden md:flex items-center bg-gray-100 rounded-full px-4 py-2.5 border border-gray-200 hover:border-gray-300 transition">
@@ -84,11 +85,10 @@ export default function Home() {
           {mobileMenuOpen && (
             <div className="lg:hidden py-4 border-t border-gray-100">
               <div className="flex flex-col space-y-3 pb-3">
-                <a href="#accueil" className="text-white bg-blue-600 px-4 py-2 rounded text-center font-medium hover:bg-blue-700">Accueil</a>
-                <a href="#genealogie" className="text-gray-700 hover:text-blue-600 py-2 px-4 rounded hover:bg-blue-50">Généalogie</a>
-                <a href="#biographie" className="text-gray-700 hover:text-blue-600 py-2 px-4 rounded hover:bg-blue-50">Biographie</a>
-                <a href="#oeuvres" className="text-gray-700 hover:text-blue-600 py-2 px-4 rounded hover:bg-blue-50">Oeuvres</a>
-                <a href="#loisirs" className="text-gray-700 hover:text-blue-600 py-2 px-4 rounded hover:bg-blue-50">Loisirs</a>
+              <li><Link to="/accueil" className="text-gray-400 hover:text-white transition flex items-center"><span className="h-1 w-3 bg-blue-500 mr-2"></span>Accueil</Link></li>
+               <li><Link to="/genealogie" className="text-gray-400 hover:text-white transition flex items-center"><span className="h-1 w-3 bg-blue-500 mr-2"></span>Généalogie</Link></li>
+               <li><Link to="/evenements" className="text-gray-400 hover:text-white transition flex items-center"><span className="h-1 w-3 bg-blue-500 mr-2"></span>Événements</Link></li>
+                <li><Link to="/biographies" className="text-gray-400 hover:text-white transition flex items-center"><span className="h-1 w-3 bg-blue-500 mr-2"></span>Biographies</Link></li>
               </div>
               <div className="flex items-center bg-gray-100 rounded-lg px-4 py-2 border border-gray-200 mt-2">
                 <input
